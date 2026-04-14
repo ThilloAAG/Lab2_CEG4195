@@ -1,0 +1,13 @@
+{
+  "splits": {
+    "train": {
+      "count": 40
+    },
+    "val": {
+      "count": 5
+    },
+    "test": {
+      "count": 5
+    }
+  }
+}

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  house-segmentation-api:
+    image: thilloaag/house-segmentation:latest
+    build: .
+    container_name: house-segmentation-api
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env                          # ← secrets injection via .env file
+    environment:
+      - FLASK_ENV=production
+    volumes:
+      - ./models:/app/models:ro       # mount trained weights read-only
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout:  10s
+      retries:  3
+      start_period: 40s

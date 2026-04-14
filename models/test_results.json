@@ -1,0 +1,9 @@
+{
+  "test_loss": 0.397232,
+  "test_iou": 0.9928,
+  "test_dice": 0.9964,
+  "val_iou": 0.9995,
+  "epochs": 20,
+  "model": "UNet",
+  "dataset": "data/processed"
+}

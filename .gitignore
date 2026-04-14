@@ -1,0 +1,34 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+
+# Fichiers de données (trop lourds)
+data/raw_image/*.tiff
+data/raw_image/*.tif
+data/processed/images/
+data/processed/masks/
+
+# Modèles (trop lourds pour GitHub)
+*.pth
+*.pt
+*.ckpt
+
+# Fichiers système
+.DS_Store
+__MACOSX/
+*.swp
+
+# Secrets
+.env
+.env.local
+
+# Notebooks temporaires
+.ipynb_checkpoints/
